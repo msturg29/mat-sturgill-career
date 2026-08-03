@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Mathew Sturgill — IT Portfolio, Governance &amp; Financial Operations</title>
+<meta name="description" content="Senior IT executive. $40M+ in documented cost reduction, $65M in annual IT spend governed. Vendor governance, portfolio management, and financial operations across Fortune 500 environments.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light only;
+    --ink:#15202E;
+    --paper:#FAFAF7;
+    --slate:#5C6B7A;
+    --rule:#C9CFD4;
+    --green:#1B6B4F;
+    --green-soft:#E8F1EC;
+    --max:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth;background:#FAFAF7}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Public Sans',system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--green);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s}
+  a:hover,a:focus-visible{border-bottom-color:var(--green)}
+  a:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  /* ── Masthead ─────────────────────────── */
+  header.mast{padding:56px 0 0}
+  .mast-row{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:12px;
+    border-bottom:2px solid var(--ink);padding-bottom:14px}
+  .mast-name{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(1.4rem,3vw,1.8rem);letter-spacing:-.01em}
+  .mast-links{font-family:'IBM Plex Mono',monospace;font-size:.82rem;display:flex;gap:22px}
+
+  /* ── Hero ─────────────────────────────── */
+  .hero{padding:72px 0 20px}
+  .hero h1{
+    font-family:'Archivo',sans-serif;font-weight:600;
+    font-size:clamp(2rem,5.2vw,3.4rem);
+    line-height:1.12;letter-spacing:-.02em;max-width:19ch;
+  }
+  .hero h1 em{font-style:normal;color:var(--green)}
+  .hero .sub{margin-top:22px;max-width:58ch;color:var(--slate);font-size:1.05rem}
+
+  /* ── The Ledger (signature) ───────────── */
+  .ledger{margin:56px 0 0;border-top:1px solid var(--ink)}
+  .ledger caption{
+    text-align:left;font-family:'IBM Plex Mono',monospace;font-size:.78rem;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--slate);
+    padding:10px 0 14px;caption-side:top;
+  }
+  table.ledger{width:100%;border-collapse:collapse}
+  .ledger td{padding:14px 0;border-bottom:1px solid var(--rule);vertical-align:baseline}
+  .ledger td.item{font-size:1rem;color:var(--ink)}
+  .ledger td.item .where{color:var(--slate);font-size:.88rem;display:block;margin-top:2px}
+  .ledger td.fig{
+    text-align:right;font-family:'IBM Plex Mono',monospace;font-weight:600;
+    font-size:clamp(1.15rem,2.6vw,1.55rem);white-space:nowrap;padding-left:24px;
+  }
+  .ledger tr.total td{
+    border-bottom:double var(--ink);border-bottom-width:4px;
+    padding-top:18px;padding-bottom:16px;
+  }
+  .ledger tr.total td.item{font-weight:600;font-family:'Archivo',sans-serif}
+  .ledger tr.total td.fig{color:var(--green);font-size:clamp(1.3rem,3vw,1.8rem)}
+
+  /* ── Sections ─────────────────────────── */
+  section{padding:76px 0 0}
+  .kicker{
+    font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--slate);display:block;margin-bottom:14px;
+  }
+  h2{font-family:'Archivo',sans-serif;font-weight:600;font-size:clamp(1.5rem,3.4vw,2.1rem);
+    letter-spacing:-.015em;margin-bottom:22px;max-width:24ch}
+  .prose{max-width:62ch;color:var(--ink)}
+  .prose p+p{margin-top:1em}
+
+  /* ── Case rows ────────────────────────── */
+  .case{border-top:1px solid var(--ink);margin-top:34px}
+  .case-row{display:grid;grid-template-columns:220px 1fr;gap:28px;
+    padding:30px 0;border-bottom:1px solid var(--rule)}
+  .case-row:last-child{border-bottom:none}
+  .case-fig{font-family:'IBM Plex Mono',monospace;font-weight:600;
+    font-size:1.5rem;color:var(--green);line-height:1.2}
+  .case-fig small{display:block;font-size:.78rem;font-weight:500;color:var(--slate);
+    letter-spacing:.08em;text-transform:uppercase;margin-top:6px}
+  .case-body h3{font-family:'Archivo',sans-serif;font-weight:600;font-size:1.08rem;margin-bottom:8px}
+  .case-body p{color:var(--ink);max-width:62ch;font-size:.98rem}
+
+  /* ── Experience ───────────────────────── */
+  .xp{border-top:1px solid var(--ink);margin-top:34px}
+  .xp-row{display:grid;grid-template-columns:170px 1fr;gap:28px;
+    padding:22px 0;border-bottom:1px solid var(--rule)}
+  .xp-row:last-child{border-bottom:none}
+  .xp-when{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--slate);padding-top:3px}
+  .xp-what strong{font-family:'Archivo',sans-serif;font-weight:600;font-size:1.02rem;display:block}
+  .xp-what span{color:var(--slate);font-size:.92rem}
+  .xp-what p{margin-top:6px;font-size:.95rem;max-width:60ch}
+
+  /* ── Credentials ──────────────────────── */
+  .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .cred{
+    font-family:'IBM Plex Mono',monospace;font-size:.82rem;font-weight:500;
+    background:var(--green-soft);color:var(--green);
+    padding:8px 14px;border-radius:3px;
+  }
+  .edu{margin-top:26px;max-width:62ch}
+  .edu p{padding:10px 0;border-bottom:1px solid var(--rule);font-size:.97rem}
+  .edu p:last-child{border-bottom:none}
+  .edu strong{font-weight:600}
+  .edu span{color:var(--slate)}
+
+  /* ── Contact / footer ─────────────────── */
+  .contact{padding:80px 0 0}
+  .contact-card{
+    border-top:2px solid var(--ink);padding:36px 0 0;
+    display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:24px;
+  }
+  .contact h2{margin-bottom:10px}
+  .contact .prose{color:var(--slate)}
+  .contact-links{font-family:'IBM Plex Mono',monospace;font-size:.92rem;display:grid;gap:10px;padding-top:8px}
+  footer{padding:70px 0 34px}
+  .foot-rule{border-top:1px solid var(--rule);padding-top:18px;
+    font-family:'IBM Plex Mono',monospace;font-size:.75rem;color:var(--slate);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  @media (max-width:640px){
+    .case-row,.xp-row{grid-template-columns:1fr;gap:8px}
+    .ledger td.fig{font-size:1.1rem}
+    .hero{padding-top:52px}
+  }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="mast-row">
+      <div class="mast-name">Mathew Sturgill</div>
+      <nav class="mast-links" aria-label="Site">
+        <a href="#results">Results</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section class="hero" aria-label="Introduction">
+    <h1>IT portfolio, governance &amp; financial operations — <em>run like a business.</em></h1>
+    <p class="sub">
+      Senior IT executive with 18+ years across Fortune 500 environments in water management,
+      medical devices, energy, and retail. I build the governance, vendor, and financial
+      operating models that turn IT spend into accountable, measurable outcomes.
+    </p>
+
+    <table class="ledger">
+      <caption>Career statement — documented figures</caption>
+      <tbody>
+        <tr>
+          <td class="item">Annual IT spend governed<span class="where">Pentair — vendor renewals, PO &amp; invoice operations</span></td>
+          <td class="fig">$65M</td>
+        </tr>
+        <tr>
+          <td class="item">Vendor renewals under active governance<span class="where">Pentair — annual portfolio</span></td>
+          <td class="fig">~110</td>
+        </tr>
+        <tr>
+          <td class="item">Largest single-vendor restructure<span class="where">Medtronic — IBM professional services, 3-year savings</span></td>
+          <td class="fig">$6M+</td>
+        </tr>
+        <tr>
+          <td class="item">Team led at peak<span class="where">Medtronic — direct reports / dotted-line</span></td>
+          <td class="fig">19 / 100+</td>
+        </tr>
+        <tr class="total">
+          <td class="item">Documented IT cost reduction delivered</td>
+          <td class="fig">$40M+</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="results" aria-label="Selected results">
+    <span class="kicker">Selected results</span>
+    <h2>Programs that paid for themselves — then kept paying.</h2>
+
+    <div class="case">
+      <div class="case-row">
+        <div class="case-fig">$40M+<small>3-year program</small></div>
+        <div class="case-body">
+          <h3>Enterprise cost reduction as a permanent capability</h3>
+          <p>Designed and led Medtronic's enterprise-wide IT cost reduction program against a
+          $10M annual target — delivering $18M, $12M, and $10M in consecutive years. The
+          framework, governance structure, and real-time Power BI savings dashboard were
+          adopted as a standing organizational capability after the program closed.</p>
+        </div>
+      </div>
+      <div class="case-row">
+        <div class="case-fig">$6M+<small>vendor restructure</small></div>
+        <div class="case-body">
+          <h3>Restructuring a top-three vendor relationship</h3>
+          <p>Rebuilt Medtronic's professional services contract with IBM — rate card
+          standardization, spend incentive structures, and full renegotiation — while
+          designing the vendor governance framework that improved satisfaction scores
+          and strengthened the relationship it disciplined.</p>
+        </div>
+      </div>
+      <div class="case-row">
+        <div class="case-fig">6 mo<small>funding to delivery</small></div>
+        <div class="case-body">
+          <h3>Telecom expense management, from zero to recurring savings</h3>
+          <p>Secured $3M in funding and delivered a telecom expense management program in six
+          months — generating $1M–$3M+ in annual recurring savings and surfacing $7M+ in
+          further cost reduction opportunities along the way.</p>
+        </div>
+      </div>
+      <div class="case-row">
+        <div class="case-fig">$65M<small>governed today</small></div>
+        <div class="case-body">
+          <h3>Owning the financial spine of a global IT organization</h3>
+          <p>At Pentair, functional owner of IT vendor governance, financial operations, and
+          procurement strategy: ~110 annual renewals, end-to-end PO and invoice operations,
+          AOP planning with Finance leadership, and advisory on the largest cloud and
+          strategic vendor agreements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" aria-label="Experience">
+    <span class="kicker">Experience</span>
+    <h2>Eighteen years, four Fortune 500 environments.</h2>
+
+    <div class="xp">
+      <div class="xp-row">
+        <div class="xp-when">2025 — now</div>
+        <div class="xp-what">
+          <strong>IT Process &amp; Capability Lead — Senior Manager</strong>
+          <span>Pentair · Golden Valley, MN</span>
+          <p>Functional owner of vendor governance, financial operations, and procurement
+          strategy. $65M in annual spend governed; primary IT representative for AOP planning.</p>
+        </div>
+      </div>
+      <div class="xp-row">
+        <div class="xp-when">2024</div>
+        <div class="xp-what">
+          <strong>Program Manager</strong>
+          <span>Xcel Energy (via Insight Global) · Minneapolis, MN</span>
+          <p>Portfolio of six concurrent programs (~$10M annual spend) across wind energy,
+          electric distribution, natural gas, and enterprise IT. Four PM direct reports.</p>
+        </div>
+      </div>
+      <div class="xp-row">
+        <div class="xp-when">2023 — 24</div>
+        <div class="xp-what">
+          <strong>Engagement Manager</strong>
+          <span>Domo Inc. · Provo, UT</span>
+          <p>10+ concurrent SaaS implementation programs across retail, healthcare,
+          academic, and non-profit clients.</p>
+        </div>
+      </div>
+      <div class="xp-row">
+        <div class="xp-when">2014 — 23</div>
+        <div class="xp-what">
+          <strong>Senior Program Manager · Program Manager · Principal Vendor Manager</strong>
+          <span>Medtronic, Inc. · Minneapolis, MN</span>
+          <p>Nine years of progressive leadership: $40M+ cost reduction program, IBM contract
+          restructure, telecom expense management, and establishment of the offshore
+          professional services center in Bangalore. Led 19 direct reports and 100+
+          dotted-line personnel at peak.</p>
+        </div>
+      </div>
+      <div class="xp-row">
+        <div class="xp-when">2007 — 14</div>
+        <div class="xp-what">
+          <strong>Project Manager · ITIL Problem Management Lead</strong>
+          <span>Target Corporation · Minneapolis, MN</span>
+          <p>Nationwide store hardware replacement program — four-year roadmap and an RFP
+          that cut project costs 25%. Member of Target's IT Leadership Program.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Credentials">
+    <span class="kicker">Credentials</span>
+    <h2>Certified where the money meets the technology.</h2>
+    <div class="creds">
+      <span class="cred">MBA</span>
+      <span class="cred">PMP</span>
+      <span class="cred">CSM</span>
+      <span class="cred">FinOps Certified Practitioner</span>
+      <span class="cred">FinOps Certified FOCUS Analyst</span>
+      <span class="cred">Six Sigma Green Belt</span>
+      <span class="cred">Google Cloud Digital Leader</span>
+    </div>
+    <div class="edu">
+      <p><strong>Master of Business Administration</strong> <span>— Augsburg University</span></p>
+      <p><strong>B.A.Sc., Management Information Systems &amp; Operations Management</strong>
+         <span>— Carlson School of Management, University of Minnesota</span></p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-label="Contact">
+    <div class="contact-card">
+      <div>
+        <h2>The ledger is open.</h2>
+        <p class="prose">If your IT organization needs its spend governed, its vendors
+        managed, and its results documented — let's talk.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:mat.sturgill@gmail.com">mat.sturgill@gmail.com</a>
+        <a href="https://linkedin.com/in/mat-sturgill-mba-pmp" rel="me">linkedin.com/in/mat-sturgill-mba-pmp</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-rule">
+      <span>Mathew Sturgill — IT Portfolio, Governance &amp; Financial Operations</span>
+      <span>All figures documented and verifiable on request.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
